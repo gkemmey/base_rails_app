@@ -54,4 +54,30 @@
       color: white;
     }
   }
+
+  .header {
+    .seperator {
+      height: 1px;
+      margin-bottom: 20px;
+
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+
+  .header-center {
+    text-align: center;
+
+    .seperator {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
 }
