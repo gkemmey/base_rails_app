@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body id="<%= yield(:body_id) %>">
+<%= render "layouts/navigation" %>
 <%= yield %>
 
 </body>

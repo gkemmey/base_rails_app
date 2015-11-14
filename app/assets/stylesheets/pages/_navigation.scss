@@ -1,0 +1,101 @@
+/* ADJUST SIZING OF ALL NAVBARS
+-------------------------------------------------- */
+$nav_background: #FFFFFF;
+$nav_active_border_color: #000000;
+$nav_font_color: #555;
+
+$nav_height: 80px;
+$nav_padding_top: 30px;
+$nav_border_width: 3px;
+
+.navbar {
+  border: 0px; /* take the bootstrap border away */
+  height: $nav_height;
+  font-size: 16px;
+  font-weight: 300;
+  background: $nav_background;
+  color: $nav_font_color;
+
+  ul.nav {
+    li.active {
+      a { 
+        background: $nav_background;
+        color: $nav_font_color;
+
+        /* change active link to display border at top */
+        border-top-style: solid;
+        border-top-width: $nav_border_width;
+        border-color: $nav_active_border_color;
+      }
+
+      /* stop bootstrap active hover by setting to background */
+      a:hover { 
+        background: $nav_background;
+        color: $nav_font_color;
+      }
+    }
+
+    /* stop bootstrap normal hover */
+    li {
+      a {
+        background: $nav_background;
+        color: $nav_font_color; 
+      }
+
+      a:hover {
+        background: $nav_background;
+        color: $nav_font_color;
+      }
+    }
+  }
+
+  /* stop bootstrap transparent toggle */
+  .navbar-collapse.in {
+    background: $nav_background;
+  }
+  .navbar-collapse.collapsing {
+    background: $nav_background;
+  }
+
+  /* witch the border to the left if we've activated collapse menu */
+  .in > ul.nav, .collapsing > ul.nav {
+    li.active {
+      a {
+        /* turn off the top border */
+        border-top-style: none;
+        border-top-width: 0px;
+        
+        /* turn on side */
+        border-left-style: solid;
+        border-left-width: $nav_border_width;
+        padding-left: 12px; /* adjust to compensate for border */
+        padding-top: 10px;
+
+        border-color: $nav_active_border_color;
+      }
+    }
+  }
+}
+
+/* adjust spacing for items not in the collapsed bar */
+:not(.in):not(.collapsing) > ul.nav {
+  li {
+    height: $nav_height;
+
+    a {
+      padding-top: $nav_padding_top;
+      height: $nav_height;
+    }
+  }
+
+  /* adjust spacing for active border */
+  li.active {  a { padding-top: $nav_padding_top - $nav_border_width; } }
+}
+
+/* make the brand stand out */
+.navbar-brand {
+  font-size: 40px;
+  font-weight: 600;
+  height: $nav_height;
+  padding-top: $nav_padding_top;
+}
