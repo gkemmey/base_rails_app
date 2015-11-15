@@ -1,0 +1,20 @@
+#footer {
+  padding-top: 70px;
+  padding-bottom: 15px;
+
+  .copyright {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .social {
+    text-align: right;
+    color: rgb(153, 153, 153);
+
+    /* i don't want my icons changing colors just because they're links */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

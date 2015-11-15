@@ -128,7 +128,7 @@
     .contact-info {
       padding-bottom: 10px;
       font-size: 18px;
-      
+
       span {
         display: block;
       }
@@ -138,4 +138,23 @@
       }
     }
   }
+
+  /* leaving this as an example, but it's not necessary yet
+  .desktop-background {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      image-url("desktop_background.png");
+
+    background-size: cover;
+    background-position: 50% 0%;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 100%;
+    height: 400px;
+  } */
 }
