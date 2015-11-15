@@ -7,6 +7,10 @@ class App.SinglePageScroller
     window_height   = $(window).height();
     document_height = $(document).height();
 
+    console.log window_position
+    console.log window_height
+    console.log document_height
+
     for link in @links
       # get the offset of the div from the top of page
       div_position = $(link).offset().top;
@@ -16,6 +20,13 @@ class App.SinglePageScroller
         $("a[href='#{link}']").parent().addClass("active");
       else
         $("a[href='#{link}']").parent().removeClass("active");
+
+    # if we're at the bottom, set the last and remove all others
+    if (window_position + window_height) == document_height
+      for li in $("ul.nav").find("li")
+        $(li).removeClass("active")
+
+      $("a[href='#{@links[@links.length - 1]}']").parent().addClass("active");
 
 # turbo links for running only on the specfied controller and action
 $(document).on "page:change", ->
