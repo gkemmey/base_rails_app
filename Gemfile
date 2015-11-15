@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 
+# i opted for the easy install, don't know if that's a mistake
+gem 'font-awesome-sass', '~> 4.4.0'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
